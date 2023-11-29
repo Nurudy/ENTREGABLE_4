@@ -69,6 +69,11 @@ public class EventsEnemy : MonoBehaviour
        
     }
 
+    /*private void Disable()
+    {
+
+    }*/
+
 
 
 
@@ -80,5 +85,6 @@ public class EventsEnemy : MonoBehaviour
     private void RestartMovement()
     {
         canMove = true;
+        /*if(EventsGameManager.OnEscapeClickPressed += RestartMovement)*/
     }
 }
