@@ -57,6 +57,21 @@ public class EventsEnemy : MonoBehaviour
         return Vector2.Distance(pos, Vector2.zero) > minDistanceFromOrigin;
     }
 
+
+    private void OnEnable()
+    {
+        EventsGameManager.OnEnterClickPressed += StopMovement;
+    }
+
+    private void OnDisable()
+    {
+        EventsGameManager.OnEnterClickPressed -= RestartMovement;
+       
+    }
+
+
+
+
     private void StopMovement()
     {
         canMove = false;

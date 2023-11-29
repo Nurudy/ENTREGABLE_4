@@ -37,6 +37,19 @@ public class EventsPlayerController : MonoBehaviour
         return Vector3.Distance(transform.position, enemy.position);
     }
 
+
+    private void OnEnable()
+    {
+        EventsGameManager.OnEnterClickPressed += ChangeColorToGreen;
+
+    }
+
+    private void OnDisable()
+    {
+        EventsGameManager.OnEnterClickPressed -= ChangeColorToOriginal;
+
+    }
+
     private void ChangeColorToGreen()
     {
         spriteRenderer.color = myGreen;
