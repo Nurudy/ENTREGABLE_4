@@ -16,11 +16,13 @@ public class EventsSFX : MonoBehaviour
     private void OnEnable()
     {
         EventsGameManager.OnEnterClickPressed += StartParticleSystem;
+        EventsGameManager.OnEscapeClickPressed += StopParticleSystem;
     }
 
     private void OnDisable()
     {
         EventsGameManager.OnEnterClickPressed -= StopParticleSystem;
+        EventsGameManager.OnEscapeClickPressed -= StartParticleSystem;
     }
     private void StartParticleSystem()
     {

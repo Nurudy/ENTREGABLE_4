@@ -41,13 +41,14 @@ public class EventsPlayerController : MonoBehaviour
     private void OnEnable()
     {
         EventsGameManager.OnEnterClickPressed += ChangeColorToGreen;
+        EventsGameManager.OnEscapeClickPressed += ChangeColorToOriginal;
 
     }
 
     private void OnDisable()
     {
         EventsGameManager.OnEnterClickPressed -= ChangeColorToOriginal;
-
+        EventsGameManager.OnEscapeClickPressed -= ChangeColorToGreen;
     }
 
     private void ChangeColorToGreen()

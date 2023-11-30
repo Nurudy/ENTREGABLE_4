@@ -61,12 +61,13 @@ public class EventsEnemy : MonoBehaviour
     private void OnEnable()
     {
         EventsGameManager.OnEnterClickPressed += StopMovement;
+        EventsGameManager.OnEscapeClickPressed += RestartMovement;
     }
 
     private void OnDisable()
     {
         EventsGameManager.OnEnterClickPressed -= RestartMovement;
-       
+        EventsGameManager.OnEscapeClickPressed -= StopMovement;
     }
 
     /*private void Disable()

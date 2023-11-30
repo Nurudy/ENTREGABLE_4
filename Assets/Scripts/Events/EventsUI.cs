@@ -16,15 +16,17 @@ public class EventsUI : MonoBehaviour
     }
 
 
-    /*private void OnEnable()
+    private void OnEnable()
     {
-        EventsGameManager.OnEnterClickPressed += InitializeText;
+        EventsGameManager.OnEnterClickPressed += UpdateText;
+        EventsGameManager.OnEscapeClickPressed += UpdateText;
     }
 
     private void OnDisable()
     {
         EventsGameManager.OnEnterClickPressed -= UpdateText;
-    }*/
+        EventsGameManager.OnEscapeClickPressed -= UpdateText;
+    }
 
     private void InitializeText()
     {
